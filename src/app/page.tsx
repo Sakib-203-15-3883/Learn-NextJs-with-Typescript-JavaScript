@@ -6,10 +6,17 @@ import App from "../components/jsx/basicState/data";
 import AppTs from "../components/tsx/basicState/data";
 import DisplayCounter from "../components/jsx/context/displayCounter";
 
+import CounterDisplay from "../components/tsx/context/counterDisplay"
+
+
+
 
 export default function Home() {
   return (
     <>
+  
+    
+ 
       <p>hello</p>
       {/* from JS file  */}
       <Data />
@@ -22,6 +29,8 @@ export default function Home() {
       {/* this is a example of context api */}
       <p>this is a example of context api</p>
       <DisplayCounter />
+      <p>this is a example of context api with TS</p>
+      < CounterDisplay />
     </>
   );
 }

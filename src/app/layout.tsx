@@ -4,6 +4,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 // import {useState,useContext,createContext} from "react";
 import { CounterProvider } from "../components/jsx/context/index";
+import { CounterProviderTS } from "../components/tsx/context/index";
+
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,8 +23,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <CounterProvider>
+      <CounterProvider>
+        <CounterProviderTS>
+          
           {children}
+         
+        </CounterProviderTS>
+
         </CounterProvider>
       </body>
     </html>
