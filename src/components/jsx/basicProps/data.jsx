@@ -13,6 +13,7 @@ export default function Data() {
   return (
     <>
       <h1>From  data</h1>
+      {/* <DisplayData array={array} object={object} /> */}
       <DisplayData array={array} object={object} />
     </>
   );
