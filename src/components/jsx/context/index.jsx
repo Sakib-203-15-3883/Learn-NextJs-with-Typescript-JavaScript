@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 //here , we create a context for counter so that data from counter will be accessible to other component without passing props
 const CounterContext = createContext();
 
-//here , we create a provider for counter that holds data [state and functions ] . this data will be accessible from other components
+//we create a provider for counter that holds data [state and functions ] . this data will be accessible from other components
 
 export function CounterProvider({ children }) {
   const [count, setCount] = useState(10);
