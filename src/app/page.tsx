@@ -8,6 +8,8 @@ import DisplayCounter from "../components/jsx/context/displayCounter";
 
 import CounterDisplay from "../components/tsx/context/counterDisplay"
 
+import DynamicProps from "../components/jsx/dynamicProps/page"
+
 
 
 
@@ -31,6 +33,10 @@ export default function Home() {
       <DisplayCounter />
       <p>this is a example of context api with TS</p>
       < CounterDisplay />
+
+      {/* DynamicProps */}
+
+      <DynamicProps/>
     </>
   );
 }
