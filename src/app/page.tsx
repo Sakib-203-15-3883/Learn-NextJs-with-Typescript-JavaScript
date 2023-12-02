@@ -6,19 +6,20 @@ import App from "../components/jsx/basicState/data";
 import AppTs from "../components/tsx/basicState/data";
 import DisplayCounter from "../components/jsx/context/displayCounter";
 
-import CounterDisplay from "../components/tsx/context/counterDisplay"
+import CounterDisplay from "../components/tsx/context/counterDisplay";
 
-import DynamicProps from "../components/jsx/dynamicProps/page"
-
-
-
+import DynamicProps from "../components/jsx/dynamicProps/page";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
+  const handleImageSliderNavigation = () => {
+    router.push("/imageSlider");
+  };
+
   return (
     <>
-  
-    
- 
       <p>hello</p>
       {/* from JS file  */}
       <Data />
@@ -32,11 +33,26 @@ export default function Home() {
       <p>this is a example of context api</p>
       <DisplayCounter />
       <p>this is a example of context api with TS</p>
-      < CounterDisplay />
+      <CounterDisplay />
 
       {/* DynamicProps */}
 
-      <DynamicProps/>
+      <DynamicProps />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          fontWeight: 700,
+          backgroundColor: "navajowhite",
+          width:"25%",
+          height:70,
+          marginLeft:"35%",
+          marginBottom:60,
+        }}
+      >
+        <button onClick={handleImageSliderNavigation}>Image slider Page</button>
+      </div>
     </>
   );
 }
